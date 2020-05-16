@@ -19,6 +19,7 @@ class AuthController extends Controller
             'password' => bcrypt($request->password),
         ]);
         $user->save();
+        $user->assignRole('user');
         return response()->json([
             'message' => 'Successfully created user!'], 201);
     }
@@ -47,6 +48,8 @@ class AuthController extends Controller
             'expires_at'   => Carbon::parse(
                 $tokenResult->token->expires_at)
                     ->toDateTimeString(),
+            'rol' => $user->getRoleNames(),
+            'id' => $user->id
         ]);
     }
 
