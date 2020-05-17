@@ -23,3 +23,24 @@ Route::group(['prefix' => 'auth'], function () {
         Route::get('user', 'AuthController@user');
     });
 });
+
+Route::group([    
+    'middleware' => 'api',    
+    'prefix' => 'ticket'
+], function () {  
+
+    Route::post('create', 'TicketController@create_ticket');
+
+    Route::get('list', 'TicketController@list_tickets');
+
+    Route::get('find/{id}', 'TicketController@find_ticket');
+
+    Route::get('list_user_tickets/{id}', 'TicketController@list_user_tickets');
+
+    Route::put('update', 'TicketController@update_ticket');
+
+    Route::put('update_status/{id}', 'TicketController@update_status');
+
+    Route::delete('delete/{id}', 'TicketController@delete');
+   
+});
