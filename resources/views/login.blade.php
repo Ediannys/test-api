@@ -11,7 +11,7 @@
   
     </head>
     <body>
-        <div id="root"></div>
+        <div id="login"></div>
        <script src="/js/app.js"></script>
     </body>
 </html>
