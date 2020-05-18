@@ -104,8 +104,8 @@ function ProfileAdmin() {
 
   let history = useHistory();
 
-  if (localStorage.getItem('rol') != "admin") {}
-  
+  if (localStorage.getItem('rol') != "admin") {window.location.href="/user_profile";}
+  else {
   const classes = useStyles();
   const [rows, setRows] = React.useState([])
   const [open, setOpen] = React.useState(false);
@@ -342,6 +342,7 @@ function ProfileAdmin() {
        </div>
     </div>
     );
+                   }
 
 }
 

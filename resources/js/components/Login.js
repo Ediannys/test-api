@@ -9,6 +9,9 @@ import RFTextField from './form/RFTextField';
 import FormButton from './form/FormButton';
 import FormFeedback from './form/FormFeedback';
 import Typography from '@material-ui/core/Typography';
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
+
+
 
 
 
@@ -35,6 +38,7 @@ function Login() {
 
   const classes = useStyles();
   const [disabled, setDisabled] = React.useState(true);
+  const [redirect, setRedirect]= React.useState(null);
   let history = useHistory();
 
 
@@ -65,7 +69,8 @@ function Login() {
     
     login(user).then(res=>{
       if(res){
-        console.log(res);
+        if(localStorage.getItem('rol') == "user") window.location.href="/user_profile";
+        else window.location.href="/admin_profile"; 
        
       }
     })
@@ -75,6 +80,7 @@ function Login() {
   return (
 
     <div className={classes.divSigIn}>
+      <Router>{redirect && <Redirect href={redirect} />}</Router>
       <Form onSubmit={handleSubmit} subscription={{ submitting: true }} validate={validate}  >
         {({ handleSubmit, values, submitting }) => (
 

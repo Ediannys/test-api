@@ -86,7 +86,8 @@ const useStyles = makeStyles((theme) =>({
 function Profile() {
   let history = useHistory();
 
-  if (localStorage.getItem('rol') != "user") history.push("/profile-admin");
+  if (localStorage.getItem('rol') != "user") {window.location.href="/admin_profile";}
+  else{
   
   const classes = useStyles();
   const [rows, setRows] = React.useState([])
@@ -251,6 +252,7 @@ return (
      </div>
   </div>
   );
+                      }
     }
 
 export default Profile

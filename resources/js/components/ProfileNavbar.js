@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { getUser } from './AuthFunctions'
 import { logout } from './AuthFunctions'
 import LinearProgress from '@material-ui/core/LinearProgress'
-import { Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
 
 
 
@@ -72,7 +71,7 @@ let history = useHistory();
       localStorage.removeItem('isAuthenticated')
       localStorage.removeItem('rol')
       localStorage.removeItem('userId')
-      setRedirect("/");
+      window.location.href="/";
     }) 
 
     
@@ -96,6 +95,8 @@ React.useEffect(() => {
   return (
 
     <div className={classes.root}>
+
+       <Router>{redirect && <Redirect to={redirect} />}</Router>
       <div className={classes.progress}>
    
     </div>
@@ -109,10 +110,7 @@ React.useEffect(() => {
             <span>{user.last_name} </span>
           </Typography>
           
-                
-           
-            <Button className={classes.button} onClick={handleLogOut} color="inherit">Cerrar Sesión</Button>
-            {redirect && <Redirect to={redirect} />}
+          <Button className={classes.button} onClick={handleLogOut} color="inherit">Cerrar Sesión</Button>
            
           </div>
         </Toolbar>
