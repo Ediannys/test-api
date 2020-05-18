@@ -63,21 +63,21 @@ function Home(props)  {
         React Js con Laravel
       </Typography>
 
-      <Router>
+  
               
-        <Link className={classes.link} to="/register" color="inherit" >
+        
         <Button
         color="secondary"
         variant="contained"
         size="large"
         className={classes.button}
         component="a"
-        onClick={handleClick}
+        href="/register"
       >
         Registrarse
       </Button>
-          </Link>
-      </Router>
+          
+     
       
       </ProductHeroLayout>
     )

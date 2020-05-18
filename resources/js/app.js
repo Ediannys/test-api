@@ -15,3 +15,4 @@ require('./bootstrap');
 require('./components/Main');
 require('./components/RegisterComponent');
 require('./components/LoginComponent');
+require('./components/UserComponent');

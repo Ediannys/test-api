@@ -65,7 +65,7 @@ function Login() {
     
     login(user).then(res=>{
       if(res){
-        
+        console.log(res);
        
       }
     })

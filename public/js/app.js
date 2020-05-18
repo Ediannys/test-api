@@ -575,6 +575,18 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/esm/AppBar/AppBar.js":
 /*!*************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/AppBar/AppBar.js ***!
@@ -756,6 +768,140 @@ var AppBar = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function AppBar(pr
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AppBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppBar */ "./node_modules/@material-ui/core/esm/AppBar/AppBar.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _AppBar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Backdrop/Backdrop.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Backdrop/Backdrop.js ***!
+  \*****************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Fade */ "./node_modules/@material-ui/core/esm/Fade/index.js");
+
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    // Improve scrollable dialog support.
+    zIndex: -1,
+    position: 'fixed',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 0,
+    bottom: 0,
+    top: 0,
+    left: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    WebkitTapHighlightColor: 'transparent'
+  },
+
+  /* Styles applied to the root element if `invisible={true}`. */
+  invisible: {
+    backgroundColor: 'transparent'
+  }
+};
+var Backdrop = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function Backdrop(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$invisible = props.invisible,
+      invisible = _props$invisible === void 0 ? false : _props$invisible,
+      open = props.open,
+      transitionDuration = props.transitionDuration,
+      _props$TransitionComp = props.TransitionComponent,
+      TransitionComponent = _props$TransitionComp === void 0 ? _Fade__WEBPACK_IMPORTED_MODULE_6__["default"] : _props$TransitionComp,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["children", "classes", "className", "invisible", "open", "transitionDuration", "TransitionComponent"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](TransitionComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    in: open,
+    timeout: transitionDuration
+  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, invisible && classes.invisible),
+    "aria-hidden": true,
+    ref: ref
+  }, children));
+});
+ true ? Backdrop.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The content of the component.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * If `true`, the backdrop is invisible.
+   * It can be used when rendering a popover or a custom select component.
+   */
+  invisible: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the backdrop is open.
+   */
+  open: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool.isRequired,
+
+  /**
+   * The duration for the transition, in milliseconds.
+   * You may specify a single timeout for all transitions, or individually with an object.
+   */
+  transitionDuration: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.shape({
+    appear: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
+    enter: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
+    exit: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number
+  })])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiBackdrop'
+})(Backdrop));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Backdrop/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Backdrop/index.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Backdrop__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Backdrop */ "./node_modules/@material-ui/core/esm/Backdrop/Backdrop.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Backdrop__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
@@ -2223,6 +2369,564 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/esm/Chip/Chip.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Chip/Chip.js ***!
+  \*********************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _internal_svg_icons_Cancel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../internal/svg-icons/Cancel */ "./node_modules/@material-ui/core/esm/internal/svg-icons/Cancel.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+/* harmony import */ var _utils_useForkRef__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/useForkRef */ "./node_modules/@material-ui/core/esm/utils/useForkRef.js");
+/* harmony import */ var _utils_unsupportedProp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/unsupportedProp */ "./node_modules/@material-ui/core/esm/utils/unsupportedProp.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@material-ui/core/esm/utils/capitalize.js");
+/* harmony import */ var _ButtonBase__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../ButtonBase */ "./node_modules/@material-ui/core/esm/ButtonBase/index.js");
+
+
+
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  var backgroundColor = theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[700];
+  var deleteIconColor = Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.text.primary, 0.26);
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      fontFamily: theme.typography.fontFamily,
+      fontSize: theme.typography.pxToRem(13),
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: 32,
+      color: theme.palette.getContrastText(backgroundColor),
+      backgroundColor: backgroundColor,
+      borderRadius: 32 / 2,
+      whiteSpace: 'nowrap',
+      transition: theme.transitions.create(['background-color', 'box-shadow']),
+      // label will inherit this from root, then `clickable` class overrides this for both
+      cursor: 'default',
+      // We disable the focus ring for mouse, touch and keyboard users.
+      outline: 0,
+      textDecoration: 'none',
+      border: 'none',
+      // Remove `button` border
+      padding: 0,
+      // Remove `button` padding
+      verticalAlign: 'middle',
+      boxSizing: 'border-box',
+      '&$disabled': {
+        opacity: 0.5,
+        pointerEvents: 'none'
+      },
+      '& $avatar': {
+        marginLeft: 5,
+        marginRight: -6,
+        width: 24,
+        height: 24,
+        color: theme.palette.type === 'light' ? theme.palette.grey[700] : theme.palette.grey[300],
+        fontSize: theme.typography.pxToRem(12)
+      },
+      '& $avatarColorPrimary': {
+        color: theme.palette.primary.contrastText,
+        backgroundColor: theme.palette.primary.dark
+      },
+      '& $avatarColorSecondary': {
+        color: theme.palette.secondary.contrastText,
+        backgroundColor: theme.palette.secondary.dark
+      },
+      '& $avatarSmall': {
+        marginLeft: 4,
+        marginRight: -4,
+        width: 18,
+        height: 18,
+        fontSize: theme.typography.pxToRem(10)
+      }
+    },
+
+    /* Styles applied to the root element if `size="small"`. */
+    sizeSmall: {
+      height: 24
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.secondary.contrastText
+    },
+
+    /* Pseudo-class applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `onClick` is defined or `clickable={true}`. */
+    clickable: {
+      userSelect: 'none',
+      WebkitTapHighlightColor: 'transparent',
+      cursor: 'pointer',
+      '&:hover, &:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["emphasize"])(backgroundColor, 0.08)
+      },
+      '&:active': {
+        boxShadow: theme.shadows[1]
+      }
+    },
+
+    /* Styles applied to the root element if `onClick` and `color="primary"` is defined or `clickable={true}`. */
+    clickableColorPrimary: {
+      '&:hover, &:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["emphasize"])(theme.palette.primary.main, 0.08)
+      }
+    },
+
+    /* Styles applied to the root element if `onClick` and `color="secondary"` is defined or `clickable={true}`. */
+    clickableColorSecondary: {
+      '&:hover, &:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["emphasize"])(theme.palette.secondary.main, 0.08)
+      }
+    },
+
+    /* Styles applied to the root element if `onDelete` is defined. */
+    deletable: {
+      '&:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["emphasize"])(backgroundColor, 0.08)
+      }
+    },
+
+    /* Styles applied to the root element if `onDelete` and `color="primary"` is defined. */
+    deletableColorPrimary: {
+      '&:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["emphasize"])(theme.palette.primary.main, 0.2)
+      }
+    },
+
+    /* Styles applied to the root element if `onDelete` and `color="secondary"` is defined. */
+    deletableColorSecondary: {
+      '&:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["emphasize"])(theme.palette.secondary.main, 0.2)
+      }
+    },
+
+    /* Styles applied to the root element if `variant="outlined"`. */
+    outlined: {
+      backgroundColor: 'transparent',
+      border: "1px solid ".concat(theme.palette.type === 'light' ? 'rgba(0, 0, 0, 0.23)' : 'rgba(255, 255, 255, 0.23)'),
+      '$clickable&:hover, $clickable&:focus, $deletable&:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.text.primary, theme.palette.action.hoverOpacity)
+      },
+      '& $avatar': {
+        marginLeft: 4
+      },
+      '& $avatarSmall': {
+        marginLeft: 2
+      },
+      '& $icon': {
+        marginLeft: 4
+      },
+      '& $iconSmall': {
+        marginLeft: 2
+      },
+      '& $deleteIcon': {
+        marginRight: 5
+      },
+      '& $deleteIconSmall': {
+        marginRight: 3
+      }
+    },
+
+    /* Styles applied to the root element if `variant="outlined"` and `color="primary"`. */
+    outlinedPrimary: {
+      color: theme.palette.primary.main,
+      border: "1px solid ".concat(theme.palette.primary.main),
+      '$clickable&:hover, $clickable&:focus, $deletable&:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.primary.main, theme.palette.action.hoverOpacity)
+      }
+    },
+
+    /* Styles applied to the root element if `variant="outlined"` and `color="secondary"`. */
+    outlinedSecondary: {
+      color: theme.palette.secondary.main,
+      border: "1px solid ".concat(theme.palette.secondary.main),
+      '$clickable&:hover, $clickable&:focus, $deletable&:focus': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.secondary.main, theme.palette.action.hoverOpacity)
+      }
+    },
+    // TODO v5: remove
+
+    /* Styles applied to the `avatar` element. */
+    avatar: {},
+
+    /* Styles applied to the `avatar` element if `size="small"`. */
+    avatarSmall: {},
+
+    /* Styles applied to the `avatar` element if `color="primary"`. */
+    avatarColorPrimary: {},
+
+    /* Styles applied to the `avatar` element if `color="secondary"`. */
+    avatarColorSecondary: {},
+
+    /* Styles applied to the `icon` element. */
+    icon: {
+      color: theme.palette.type === 'light' ? theme.palette.grey[700] : theme.palette.grey[300],
+      marginLeft: 5,
+      marginRight: -6
+    },
+
+    /* Styles applied to the `icon` element if `size="small"`. */
+    iconSmall: {
+      width: 18,
+      height: 18,
+      marginLeft: 4,
+      marginRight: -4
+    },
+
+    /* Styles applied to the `icon` element if `color="primary"`. */
+    iconColorPrimary: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the `icon` element if `color="secondary"`. */
+    iconColorSecondary: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the label `span` element. */
+    label: {
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      paddingLeft: 12,
+      paddingRight: 12,
+      whiteSpace: 'nowrap'
+    },
+
+    /* Styles applied to the label `span` element if `size="small"`. */
+    labelSmall: {
+      paddingLeft: 8,
+      paddingRight: 8
+    },
+
+    /* Styles applied to the `deleteIcon` element. */
+    deleteIcon: {
+      WebkitTapHighlightColor: 'transparent',
+      color: deleteIconColor,
+      height: 22,
+      width: 22,
+      cursor: 'pointer',
+      margin: '0 5px 0 -6px',
+      '&:hover': {
+        color: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(deleteIconColor, 0.4)
+      }
+    },
+
+    /* Styles applied to the `deleteIcon` element if `size="small"`. */
+    deleteIconSmall: {
+      height: 16,
+      width: 16,
+      marginRight: 4,
+      marginLeft: -4
+    },
+
+    /* Styles applied to the deleteIcon element if `color="primary"` and `variant="default"`. */
+    deleteIconColorPrimary: {
+      color: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.primary.contrastText, 0.7),
+      '&:hover, &:active': {
+        color: theme.palette.primary.contrastText
+      }
+    },
+
+    /* Styles applied to the deleteIcon element if `color="secondary"` and `variant="default"`. */
+    deleteIconColorSecondary: {
+      color: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.secondary.contrastText, 0.7),
+      '&:hover, &:active': {
+        color: theme.palette.secondary.contrastText
+      }
+    },
+
+    /* Styles applied to the deleteIcon element if `color="primary"` and `variant="outlined"`. */
+    deleteIconOutlinedColorPrimary: {
+      color: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.primary.main, 0.7),
+      '&:hover, &:active': {
+        color: theme.palette.primary.main
+      }
+    },
+
+    /* Styles applied to the deleteIcon element if `color="secondary"` and `variant="outlined"`. */
+    deleteIconOutlinedColorSecondary: {
+      color: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.secondary.main, 0.7),
+      '&:hover, &:active': {
+        color: theme.palette.secondary.main
+      }
+    }
+  };
+};
+
+function isDeleteKeyboardEvent(keyboardEvent) {
+  return keyboardEvent.key === 'Backspace' || keyboardEvent.key === 'Delete';
+}
+/**
+ * Chips represent complex entities in small blocks, such as a contact.
+ */
+
+
+var Chip = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function Chip(props, ref) {
+  var avatarProp = props.avatar,
+      classes = props.classes,
+      className = props.className,
+      clickableProp = props.clickable,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'default' : _props$color,
+      ComponentProp = props.component,
+      deleteIconProp = props.deleteIcon,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      iconProp = props.icon,
+      label = props.label,
+      onClick = props.onClick,
+      onDelete = props.onDelete,
+      onKeyDown = props.onKeyDown,
+      onKeyUp = props.onKeyUp,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'medium' : _props$size,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'default' : _props$variant,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["avatar", "classes", "className", "clickable", "color", "component", "deleteIcon", "disabled", "icon", "label", "onClick", "onDelete", "onKeyDown", "onKeyUp", "size", "variant"]);
+
+  var chipRef = react__WEBPACK_IMPORTED_MODULE_2__["useRef"](null);
+  var handleRef = Object(_utils_useForkRef__WEBPACK_IMPORTED_MODULE_8__["default"])(chipRef, ref);
+
+  var handleDeleteIconClick = function handleDeleteIconClick(event) {
+    // Stop the event from bubbling up to the `Chip`
+    event.stopPropagation();
+
+    if (onDelete) {
+      onDelete(event);
+    }
+  };
+
+  var handleKeyDown = function handleKeyDown(event) {
+    // Ignore events from children of `Chip`.
+    if (event.currentTarget === event.target && isDeleteKeyboardEvent(event)) {
+      // will be handled in keyUp, otherwise some browsers
+      // might init navigation
+      event.preventDefault();
+    }
+
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
+  };
+
+  var handleKeyUp = function handleKeyUp(event) {
+    // Ignore events from children of `Chip`.
+    if (event.currentTarget === event.target) {
+      if (onDelete && isDeleteKeyboardEvent(event)) {
+        onDelete(event);
+      } else if (event.key === 'Escape' && chipRef.current) {
+        chipRef.current.blur();
+      }
+    }
+
+    if (onKeyUp) {
+      onKeyUp(event);
+    }
+  };
+
+  var clickable = clickableProp !== false && onClick ? true : clickableProp;
+  var small = size === 'small';
+  var Component = ComponentProp || (clickable ? _ButtonBase__WEBPACK_IMPORTED_MODULE_11__["default"] : 'div');
+  var moreProps = Component === _ButtonBase__WEBPACK_IMPORTED_MODULE_11__["default"] ? {
+    component: 'div'
+  } : {};
+  var deleteIcon = null;
+
+  if (onDelete) {
+    var customClasses = Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(color !== 'default' && (variant === "default" ? classes["deleteIconColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))] : classes["deleteIconOutlinedColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))]), small && classes.deleteIconSmall);
+    deleteIcon = deleteIconProp && react__WEBPACK_IMPORTED_MODULE_2__["isValidElement"](deleteIconProp) ? react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](deleteIconProp, {
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(deleteIconProp.props.className, classes.deleteIcon, customClasses),
+      onClick: handleDeleteIconClick
+    }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_internal_svg_icons_Cancel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.deleteIcon, customClasses),
+      onClick: handleDeleteIconClick
+    });
+  }
+
+  var avatar = null;
+
+  if (avatarProp && react__WEBPACK_IMPORTED_MODULE_2__["isValidElement"](avatarProp)) {
+    avatar = react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](avatarProp, {
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.avatar, avatarProp.props.className, small && classes.avatarSmall, color !== 'default' && classes["avatarColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))])
+    });
+  }
+
+  var icon = null;
+
+  if (iconProp && react__WEBPACK_IMPORTED_MODULE_2__["isValidElement"](iconProp)) {
+    icon = react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](iconProp, {
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.icon, iconProp.props.className, small && classes.iconSmall, color !== 'default' && classes["iconColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))])
+    });
+  }
+
+  if (true) {
+    if (avatar && icon) {
+      console.error('Material-UI: The Chip component can not handle the avatar ' + 'and the icon prop at the same time. Pick one.');
+    }
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    role: clickable || onDelete ? 'button' : undefined,
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, color !== 'default' && [classes["color".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))], clickable && classes["clickableColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))], onDelete && classes["deletableColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_10__["default"])(color))]], variant !== "default" && [classes.outlined, {
+      'primary': classes.outlinedPrimary,
+      'secondary': classes.outlinedSecondary
+    }[color]], disabled && classes.disabled, small && classes.sizeSmall, clickable && classes.clickable, onDelete && classes.deletable),
+    "aria-disabled": disabled ? true : undefined,
+    tabIndex: clickable || onDelete ? 0 : undefined,
+    onClick: onClick,
+    onKeyDown: handleKeyDown,
+    onKeyUp: handleKeyUp,
+    ref: handleRef
+  }, moreProps, other), avatar || icon, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("span", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.label, small && classes.labelSmall)
+  }, label), deleteIcon);
+});
+ true ? Chip.propTypes = {
+  /**
+   * Avatar element.
+   */
+  avatar: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.element,
+
+  /**
+   * This prop isn't supported.
+   * Use the `component` prop if you need to change the children structure.
+   */
+  children: _utils_unsupportedProp__WEBPACK_IMPORTED_MODULE_9__["default"],
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * If `true`, the chip will appear clickable, and will raise when pressed,
+   * even if the onClick prop is not defined.
+   * If false, the chip will not be clickable, even if onClick prop is defined.
+   * This can be used, for example,
+   * along with the component prop to indicate an anchor Chip is clickable.
+   */
+  clickable: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+  color: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['default', 'primary', 'secondary']),
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType,
+
+  /**
+   * Override the default delete icon element. Shown only if `onDelete` is set.
+   */
+  deleteIcon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.element,
+
+  /**
+   * If `true`, the chip should be displayed in a disabled state.
+   */
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * Icon element.
+   */
+  icon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.element,
+
+  /**
+   * The content of the label.
+   */
+  label: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * @ignore
+   */
+  onClick: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+
+  /**
+   * Callback function fired when the delete icon is clicked.
+   * If set, the delete icon will be shown.
+   */
+  onDelete: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onKeyDown: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onKeyUp: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+
+  /**
+   * The size of the chip.
+   */
+  size: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['small', 'medium']),
+
+  /**
+   * The variant to use.
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['default', 'outlined'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_6__["default"])(styles, {
+  name: 'MuiChip'
+})(Chip));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Chip/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Chip/index.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Chip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Chip */ "./node_modules/@material-ui/core/esm/Chip/Chip.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Chip__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/esm/Container/Container.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/Container/Container.js ***!
@@ -2387,6 +3091,1288 @@ var Container = react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"](function Contai
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Container */ "./node_modules/@material-ui/core/esm/Container/Container.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Container__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Dialog/Dialog.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Dialog/Dialog.js ***!
+  \*************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@material-ui/core/esm/utils/capitalize.js");
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Modal */ "./node_modules/@material-ui/core/esm/Modal/index.js");
+/* harmony import */ var _Backdrop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Backdrop */ "./node_modules/@material-ui/core/esm/Backdrop/index.js");
+/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Fade */ "./node_modules/@material-ui/core/esm/Fade/index.js");
+/* harmony import */ var _styles_transitions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/transitions */ "./node_modules/@material-ui/core/esm/styles/transitions.js");
+/* harmony import */ var _Paper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Paper */ "./node_modules/@material-ui/core/esm/Paper/index.js");
+
+
+
+
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      '@media print': {
+        // Use !important to override the Modal inline-style.
+        position: 'absolute !important'
+      }
+    },
+
+    /* Styles applied to the container element if `scroll="paper"`. */
+    scrollPaper: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+
+    /* Styles applied to the container element if `scroll="body"`. */
+    scrollBody: {
+      overflowY: 'auto',
+      overflowX: 'hidden',
+      textAlign: 'center',
+      '&:after': {
+        content: '""',
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        height: '100%',
+        width: '0'
+      }
+    },
+
+    /* Styles applied to the container element. */
+    container: {
+      height: '100%',
+      '@media print': {
+        height: 'auto'
+      },
+      // We disable the focus ring for mouse, touch and keyboard users.
+      outline: 0
+    },
+
+    /* Styles applied to the `Paper` component. */
+    paper: {
+      margin: 32,
+      position: 'relative',
+      overflowY: 'auto',
+      // Fix IE 11 issue, to remove at some point.
+      '@media print': {
+        overflowY: 'visible',
+        boxShadow: 'none'
+      }
+    },
+
+    /* Styles applied to the `Paper` component if `scroll="paper"`. */
+    paperScrollPaper: {
+      display: 'flex',
+      flexDirection: 'column',
+      maxHeight: 'calc(100% - 64px)'
+    },
+
+    /* Styles applied to the `Paper` component if `scroll="body"`. */
+    paperScrollBody: {
+      display: 'inline-block',
+      verticalAlign: 'middle',
+      textAlign: 'left' // 'initial' doesn't work on IE 11
+
+    },
+
+    /* Styles applied to the `Paper` component if `maxWidth=false`. */
+    paperWidthFalse: {
+      maxWidth: 'calc(100% - 64px)'
+    },
+
+    /* Styles applied to the `Paper` component if `maxWidth="xs"`. */
+    paperWidthXs: {
+      maxWidth: Math.max(theme.breakpoints.values.xs, 444),
+      '&$paperScrollBody': Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, theme.breakpoints.down(Math.max(theme.breakpoints.values.xs, 444) + 32 * 2), {
+        maxWidth: 'calc(100% - 64px)'
+      })
+    },
+
+    /* Styles applied to the `Paper` component if `maxWidth="sm"`. */
+    paperWidthSm: {
+      maxWidth: theme.breakpoints.values.sm,
+      '&$paperScrollBody': Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, theme.breakpoints.down(theme.breakpoints.values.sm + 32 * 2), {
+        maxWidth: 'calc(100% - 64px)'
+      })
+    },
+
+    /* Styles applied to the `Paper` component if `maxWidth="md"`. */
+    paperWidthMd: {
+      maxWidth: theme.breakpoints.values.md,
+      '&$paperScrollBody': Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, theme.breakpoints.down(theme.breakpoints.values.md + 32 * 2), {
+        maxWidth: 'calc(100% - 64px)'
+      })
+    },
+
+    /* Styles applied to the `Paper` component if `maxWidth="lg"`. */
+    paperWidthLg: {
+      maxWidth: theme.breakpoints.values.lg,
+      '&$paperScrollBody': Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, theme.breakpoints.down(theme.breakpoints.values.lg + 32 * 2), {
+        maxWidth: 'calc(100% - 64px)'
+      })
+    },
+
+    /* Styles applied to the `Paper` component if `maxWidth="xl"`. */
+    paperWidthXl: {
+      maxWidth: theme.breakpoints.values.xl,
+      '&$paperScrollBody': Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, theme.breakpoints.down(theme.breakpoints.values.xl + 32 * 2), {
+        maxWidth: 'calc(100% - 64px)'
+      })
+    },
+
+    /* Styles applied to the `Paper` component if `fullWidth={true}`. */
+    paperFullWidth: {
+      width: 'calc(100% - 64px)'
+    },
+
+    /* Styles applied to the `Paper` component if `fullScreen={true}`. */
+    paperFullScreen: {
+      margin: 0,
+      width: '100%',
+      maxWidth: '100%',
+      height: '100%',
+      maxHeight: 'none',
+      borderRadius: 0,
+      '&$paperScrollBody': {
+        margin: 0,
+        maxWidth: '100%'
+      }
+    }
+  };
+};
+var defaultTransitionDuration = {
+  enter: _styles_transitions__WEBPACK_IMPORTED_MODULE_11__["duration"].enteringScreen,
+  exit: _styles_transitions__WEBPACK_IMPORTED_MODULE_11__["duration"].leavingScreen
+};
+/**
+ * Dialogs are overlaid modal paper based components with a backdrop.
+ */
+
+var Dialog = react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"](function Dialog(props, ref) {
+  var BackdropProps = props.BackdropProps,
+      children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$disableBackdro = props.disableBackdropClick,
+      disableBackdropClick = _props$disableBackdro === void 0 ? false : _props$disableBackdro,
+      _props$disableEscapeK = props.disableEscapeKeyDown,
+      disableEscapeKeyDown = _props$disableEscapeK === void 0 ? false : _props$disableEscapeK,
+      _props$fullScreen = props.fullScreen,
+      fullScreen = _props$fullScreen === void 0 ? false : _props$fullScreen,
+      _props$fullWidth = props.fullWidth,
+      fullWidth = _props$fullWidth === void 0 ? false : _props$fullWidth,
+      _props$maxWidth = props.maxWidth,
+      maxWidth = _props$maxWidth === void 0 ? 'sm' : _props$maxWidth,
+      onBackdropClick = props.onBackdropClick,
+      onClose = props.onClose,
+      onEnter = props.onEnter,
+      onEntered = props.onEntered,
+      onEntering = props.onEntering,
+      onEscapeKeyDown = props.onEscapeKeyDown,
+      onExit = props.onExit,
+      onExited = props.onExited,
+      onExiting = props.onExiting,
+      open = props.open,
+      _props$PaperComponent = props.PaperComponent,
+      PaperComponent = _props$PaperComponent === void 0 ? _Paper__WEBPACK_IMPORTED_MODULE_12__["default"] : _props$PaperComponent,
+      _props$PaperProps = props.PaperProps,
+      PaperProps = _props$PaperProps === void 0 ? {} : _props$PaperProps,
+      _props$scroll = props.scroll,
+      scroll = _props$scroll === void 0 ? 'paper' : _props$scroll,
+      _props$TransitionComp = props.TransitionComponent,
+      TransitionComponent = _props$TransitionComp === void 0 ? _Fade__WEBPACK_IMPORTED_MODULE_10__["default"] : _props$TransitionComp,
+      _props$transitionDura = props.transitionDuration,
+      transitionDuration = _props$transitionDura === void 0 ? defaultTransitionDuration : _props$transitionDura,
+      TransitionProps = props.TransitionProps,
+      ariaDescribedby = props['aria-describedby'],
+      ariaLabelledby = props['aria-labelledby'],
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["BackdropProps", "children", "classes", "className", "disableBackdropClick", "disableEscapeKeyDown", "fullScreen", "fullWidth", "maxWidth", "onBackdropClick", "onClose", "onEnter", "onEntered", "onEntering", "onEscapeKeyDown", "onExit", "onExited", "onExiting", "open", "PaperComponent", "PaperProps", "scroll", "TransitionComponent", "transitionDuration", "TransitionProps", "aria-describedby", "aria-labelledby"]);
+
+  var mouseDownTarget = react__WEBPACK_IMPORTED_MODULE_3__["useRef"]();
+
+  var handleMouseDown = function handleMouseDown(event) {
+    mouseDownTarget.current = event.target;
+  };
+
+  var handleBackdropClick = function handleBackdropClick(event) {
+    // Ignore the events not coming from the "backdrop"
+    // We don't want to close the dialog when clicking the dialog content.
+    if (event.target !== event.currentTarget) {
+      return;
+    } // Make sure the event starts and ends on the same DOM element.
+
+
+    if (event.target !== mouseDownTarget.current) {
+      return;
+    }
+
+    mouseDownTarget.current = null;
+
+    if (onBackdropClick) {
+      onBackdropClick(event);
+    }
+
+    if (!disableBackdropClick && onClose) {
+      onClose(event, 'backdropClick');
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"](_Modal__WEBPACK_IMPORTED_MODULE_8__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_5__["default"])(classes.root, className),
+    BackdropComponent: _Backdrop__WEBPACK_IMPORTED_MODULE_9__["default"],
+    BackdropProps: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      transitionDuration: transitionDuration
+    }, BackdropProps),
+    closeAfterTransition: true,
+    disableBackdropClick: disableBackdropClick,
+    disableEscapeKeyDown: disableEscapeKeyDown,
+    onEscapeKeyDown: onEscapeKeyDown,
+    onClose: onClose,
+    open: open,
+    ref: ref
+  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"](TransitionComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    appear: true,
+    in: open,
+    timeout: transitionDuration,
+    onEnter: onEnter,
+    onEntering: onEntering,
+    onEntered: onEntered,
+    onExit: onExit,
+    onExiting: onExiting,
+    onExited: onExited,
+    role: "none presentation"
+  }, TransitionProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_5__["default"])(classes.container, classes["scroll".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(scroll))]),
+    onClick: handleBackdropClick,
+    onMouseDown: handleMouseDown
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"](PaperComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    elevation: 24,
+    role: "dialog",
+    "aria-describedby": ariaDescribedby,
+    "aria-labelledby": ariaLabelledby
+  }, PaperProps, {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_5__["default"])(classes.paper, classes["paperScroll".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(scroll))], classes["paperWidth".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(String(maxWidth)))], PaperProps.className, fullScreen && classes.paperFullScreen, fullWidth && classes.paperFullWidth)
+  }), children))));
+});
+ true ? Dialog.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The id(s) of the element(s) that describe the dialog.
+   */
+  'aria-describedby': prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+
+  /**
+   * The id(s) of the element(s) that label the dialog.
+   */
+  'aria-labelledby': prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+
+  /**
+   * @ignore
+   */
+  BackdropProps: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+
+  /**
+   * Dialog children, usually the included sub-components.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+
+  /**
+   * If `true`, clicking the backdrop will not fire the `onClose` callback.
+   */
+  disableBackdropClick: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+
+  /**
+   * If `true`, hitting escape will not fire the `onClose` callback.
+   */
+  disableEscapeKeyDown: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+
+  /**
+   * If `true`, the dialog will be full-screen
+   */
+  fullScreen: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+
+  /**
+   * If `true`, the dialog stretches to `maxWidth`.
+   *
+   * Notice that the dialog width grow is limited by the default margin.
+   */
+  fullWidth: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+
+  /**
+   * Determine the max-width of the dialog.
+   * The dialog width grows with the size of the screen.
+   * Set to `false` to disable `maxWidth`.
+   */
+  maxWidth: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOf(['lg', 'md', 'sm', 'xl', 'xs', false]),
+
+  /**
+   * Callback fired when the backdrop is clicked.
+   */
+  onBackdropClick: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired when the component requests to be closed.
+   *
+   * @param {object} event The event source of the callback.
+   * @param {string} reason Can be: `"escapeKeyDown"`, `"backdropClick"`.
+   */
+  onClose: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired before the dialog enters.
+   */
+  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired when the dialog has entered.
+   */
+  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired when the dialog is entering.
+   */
+  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired when the escape key is pressed,
+   * `disableKeyboard` is false and the modal is in focus.
+   */
+  onEscapeKeyDown: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired before the dialog exits.
+   */
+  onExit: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired when the dialog has exited.
+   */
+  onExited: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * Callback fired when the dialog is exiting.
+   */
+  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * If `true`, the Dialog is open.
+   */
+  open: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool.isRequired,
+
+  /**
+   * The component used to render the body of the dialog.
+   */
+  PaperComponent: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.elementType,
+
+  /**
+   * Props applied to the [`Paper`](/api/paper/) element.
+   */
+  PaperProps: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+
+  /**
+   * Determine the container for scrolling the dialog.
+   */
+  scroll: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOf(['body', 'paper']),
+
+  /**
+   * The component used for the transition.
+   * [Follow this guide](/components/transitions/#transitioncomponent-prop) to learn more about the requirements for this component.
+   */
+  TransitionComponent: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.elementType,
+
+  /**
+   * The duration for the transition, in milliseconds.
+   * You may specify a single timeout for all transitions, or individually with an object.
+   */
+  transitionDuration: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
+    appear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+    enter: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+    exit: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number
+  })]),
+
+  /**
+   * Props applied to the [`Transition`](http://reactcommunity.org/react-transition-group/transition#Transition-props) element.
+   */
+  TransitionProps: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_6__["default"])(styles, {
+  name: 'MuiDialog'
+})(Dialog));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Dialog/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Dialog/index.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dialog */ "./node_modules/@material-ui/core/esm/Dialog/Dialog.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Dialog__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js ***!
+  \***************************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: 8,
+    justifyContent: 'flex-end',
+    flex: '0 0 auto'
+  },
+
+  /* Styles applied to the root element if `disableSpacing={false}`. */
+  spacing: {
+    '& > :not(:first-child)': {
+      marginLeft: 8
+    }
+  }
+};
+var DialogActions = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function DialogActions(props, ref) {
+  var _props$disableSpacing = props.disableSpacing,
+      disableSpacing = _props$disableSpacing === void 0 ? false : _props$disableSpacing,
+      classes = props.classes,
+      className = props.className,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["disableSpacing", "classes", "className"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, !disableSpacing && classes.spacing),
+    ref: ref
+  }, other));
+});
+ true ? DialogActions.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The content of the component.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * If `true`, the actions do not have additional margin.
+   */
+  disableSpacing: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiDialogActions'
+})(DialogActions));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/DialogActions/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/DialogActions/index.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DialogActions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _DialogActions__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js ***!
+  \***************************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      flex: '1 1 auto',
+      WebkitOverflowScrolling: 'touch',
+      // Add iOS momentum scrolling.
+      overflowY: 'auto',
+      padding: '8px 24px',
+      '&:first-child': {
+        // dialog without title
+        paddingTop: 20
+      }
+    },
+
+    /* Styles applied to the root element if `dividers={true}`. */
+    dividers: {
+      padding: '16px 24px',
+      borderTop: "1px solid ".concat(theme.palette.divider),
+      borderBottom: "1px solid ".concat(theme.palette.divider)
+    }
+  };
+};
+var DialogContent = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function DialogContent(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$dividers = props.dividers,
+      dividers = _props$dividers === void 0 ? false : _props$dividers,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["classes", "className", "dividers"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, dividers && classes.dividers),
+    ref: ref
+  }, other));
+});
+ true ? DialogContent.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The content of the component.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * Display the top and bottom dividers.
+   */
+  dividers: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiDialogContent'
+})(DialogContent));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/DialogContent/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/DialogContent/index.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DialogContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _DialogContent__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js ***!
+  \***********************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    margin: 0,
+    padding: '16px 24px',
+    flex: '0 0 auto'
+  }
+};
+var DialogTitle = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function DialogTitle(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$disableTypogra = props.disableTypography,
+      disableTypography = _props$disableTypogra === void 0 ? false : _props$disableTypogra,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["children", "classes", "className", "disableTypography"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className),
+    ref: ref
+  }, other), disableTypography ? children : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_Typography__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    component: "h2",
+    variant: "h6"
+  }, children));
+});
+ true ? DialogTitle.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The content of the component.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * If `true`, the children won't be wrapped by a typography component.
+   * For instance, this can be useful to render an h4 instead of the default h2.
+   */
+  disableTypography: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiDialogTitle'
+})(DialogTitle));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/DialogTitle/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/DialogTitle/index.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DialogTitle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _DialogTitle__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Fab/Fab.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Fab/Fab.js ***!
+  \*******************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _ButtonBase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ButtonBase */ "./node_modules/@material-ui/core/esm/ButtonBase/index.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@material-ui/core/esm/utils/capitalize.js");
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, theme.typography.button), {}, {
+      boxSizing: 'border-box',
+      minHeight: 36,
+      transition: theme.transitions.create(['background-color', 'box-shadow', 'border'], {
+        duration: theme.transitions.duration.short
+      }),
+      borderRadius: '50%',
+      padding: 0,
+      minWidth: 0,
+      width: 56,
+      height: 56,
+      boxShadow: theme.shadows[6],
+      '&:active': {
+        boxShadow: theme.shadows[12]
+      },
+      color: theme.palette.getContrastText(theme.palette.grey[300]),
+      backgroundColor: theme.palette.grey[300],
+      '&:hover': {
+        backgroundColor: theme.palette.grey.A100,
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.grey[300]
+        },
+        '&$disabled': {
+          backgroundColor: theme.palette.action.disabledBackground
+        },
+        textDecoration: 'none'
+      },
+      '&$focusVisible': {
+        boxShadow: theme.shadows[6]
+      },
+      '&$disabled': {
+        color: theme.palette.action.disabled,
+        boxShadow: theme.shadows[0],
+        backgroundColor: theme.palette.action.disabledBackground
+      }
+    }),
+
+    /* Styles applied to the span element that wraps the children. */
+    label: {
+      width: '100%',
+      // assure the correct width for iOS Safari
+      display: 'inherit',
+      alignItems: 'inherit',
+      justifyContent: 'inherit'
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    primary: {
+      color: theme.palette.primary.contrastText,
+      backgroundColor: theme.palette.primary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.primary.dark,
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.primary.main
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    secondary: {
+      color: theme.palette.secondary.contrastText,
+      backgroundColor: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.secondary.dark,
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.secondary.main
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `variant="extended"`. */
+    extended: {
+      borderRadius: 48 / 2,
+      padding: '0 16px',
+      width: 'auto',
+      minHeight: 'auto',
+      minWidth: 48,
+      height: 48,
+      '&$sizeSmall': {
+        width: 'auto',
+        padding: '0 8px',
+        borderRadius: 34 / 2,
+        minWidth: 34,
+        height: 34
+      },
+      '&$sizeMedium': {
+        width: 'auto',
+        padding: '0 16px',
+        borderRadius: 40 / 2,
+        minWidth: 40,
+        height: 40
+      }
+    },
+
+    /* Pseudo-class applied to the ButtonBase root element if the button is keyboard focused. */
+    focusVisible: {},
+
+    /* Pseudo-class applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `color="inherit"`. */
+    colorInherit: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the root element if `size="small"``. */
+    sizeSmall: {
+      width: 40,
+      height: 40
+    },
+
+    /* Styles applied to the root element if `size="medium"``. */
+    sizeMedium: {
+      width: 48,
+      height: 48
+    }
+  };
+};
+var Fab = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function Fab(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'default' : _props$color,
+      _props$component = props.component,
+      component = _props$component === void 0 ? 'button' : _props$component,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$disableFocusRi = props.disableFocusRipple,
+      disableFocusRipple = _props$disableFocusRi === void 0 ? false : _props$disableFocusRi,
+      focusVisibleClassName = props.focusVisibleClassName,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'large' : _props$size,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'round' : _props$variant,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(props, ["children", "classes", "className", "color", "component", "disabled", "disableFocusRipple", "focusVisibleClassName", "size", "variant"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_ButtonBase__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, variant !== "round" && classes.extended, size !== 'large' && classes["size".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(size))], disabled && classes.disabled, {
+      'primary': classes.primary,
+      'secondary': classes.secondary,
+      'inherit': classes.colorInherit
+    }[color]),
+    component: component,
+    disabled: disabled,
+    focusRipple: !disableFocusRipple,
+    focusVisibleClassName: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.focusVisible, focusVisibleClassName),
+    ref: ref
+  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("span", {
+    className: classes.label
+  }, children));
+});
+ true ? Fab.propTypes = {
+  /**
+   * The content of the button.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node.isRequired,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+  color: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['default', 'inherit', 'primary', 'secondary']),
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType,
+
+  /**
+   * If `true`, the button will be disabled.
+   */
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the  keyboard focus ripple will be disabled.
+   * `disableRipple` must also be true.
+   */
+  disableFocusRipple: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the ripple effect will be disabled.
+   */
+  disableRipple: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * @ignore
+   */
+  focusVisibleClassName: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The URL to link to when the button is clicked.
+   * If defined, an `a` element will be used as the root node.
+   */
+  href: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The size of the button.
+   * `small` is equivalent to the dense button styling.
+   */
+  size: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['small', 'medium', 'large']),
+
+  /**
+   * @ignore
+   */
+  type: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The variant to use.
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['round', 'extended'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiFab'
+})(Fab));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Fab/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Fab/index.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Fab__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fab */ "./node_modules/@material-ui/core/esm/Fab/Fab.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Fab__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Fade/Fade.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Fade/Fade.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
+/* harmony import */ var _styles_transitions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/transitions */ "./node_modules/@material-ui/core/esm/styles/transitions.js");
+/* harmony import */ var _styles_useTheme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/useTheme */ "./node_modules/@material-ui/core/esm/styles/useTheme.js");
+/* harmony import */ var _transitions_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../transitions/utils */ "./node_modules/@material-ui/core/esm/transitions/utils.js");
+/* harmony import */ var _utils_useForkRef__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/useForkRef */ "./node_modules/@material-ui/core/esm/utils/useForkRef.js");
+
+
+
+
+
+
+
+
+
+
+var styles = {
+  entering: {
+    opacity: 1
+  },
+  entered: {
+    opacity: 1
+  }
+};
+var defaultTimeout = {
+  enter: _styles_transitions__WEBPACK_IMPORTED_MODULE_6__["duration"].enteringScreen,
+  exit: _styles_transitions__WEBPACK_IMPORTED_MODULE_6__["duration"].leavingScreen
+};
+/**
+ * The Fade transition is used by the [Modal](/components/modal/) component.
+ * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
+ */
+
+var Fade = react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"](function Fade(props, ref) {
+  var children = props.children,
+      _props$disableStrictM = props.disableStrictModeCompat,
+      disableStrictModeCompat = _props$disableStrictM === void 0 ? false : _props$disableStrictM,
+      inProp = props.in,
+      onEnter = props.onEnter,
+      onEntered = props.onEntered,
+      onEntering = props.onEntering,
+      onExit = props.onExit,
+      onExited = props.onExited,
+      onExiting = props.onExiting,
+      style = props.style,
+      _props$TransitionComp = props.TransitionComponent,
+      TransitionComponent = _props$TransitionComp === void 0 ? react_transition_group__WEBPACK_IMPORTED_MODULE_5__["Transition"] : _props$TransitionComp,
+      _props$timeout = props.timeout,
+      timeout = _props$timeout === void 0 ? defaultTimeout : _props$timeout,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["children", "disableStrictModeCompat", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "TransitionComponent", "timeout"]);
+
+  var theme = Object(_styles_useTheme__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  var enableStrictModeCompat = theme.unstable_strictMode && !disableStrictModeCompat;
+  var nodeRef = react__WEBPACK_IMPORTED_MODULE_3__["useRef"](null);
+  var foreignRef = Object(_utils_useForkRef__WEBPACK_IMPORTED_MODULE_9__["default"])(children.ref, ref);
+  var handleRef = Object(_utils_useForkRef__WEBPACK_IMPORTED_MODULE_9__["default"])(enableStrictModeCompat ? nodeRef : undefined, foreignRef);
+
+  var normalizedTransitionCallback = function normalizedTransitionCallback(callback) {
+    return function (nodeOrAppearing, maybeAppearing) {
+      if (callback) {
+        var _ref = enableStrictModeCompat ? [nodeRef.current, nodeOrAppearing] : [nodeOrAppearing, maybeAppearing],
+            _ref2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, 2),
+            node = _ref2[0],
+            isAppearing = _ref2[1];
+
+        callback(node, isAppearing);
+      }
+    };
+  };
+
+  var handleEntering = normalizedTransitionCallback(onEntering);
+  var handleEnter = normalizedTransitionCallback(function (node, isAppearing) {
+    Object(_transitions_utils__WEBPACK_IMPORTED_MODULE_8__["reflow"])(node); // So the animation always start from the start.
+
+    var transitionProps = Object(_transitions_utils__WEBPACK_IMPORTED_MODULE_8__["getTransitionProps"])({
+      style: style,
+      timeout: timeout
+    }, {
+      mode: 'enter'
+    });
+    node.style.webkitTransition = theme.transitions.create('opacity', transitionProps);
+    node.style.transition = theme.transitions.create('opacity', transitionProps);
+
+    if (onEnter) {
+      onEnter(node, isAppearing);
+    }
+  });
+  var handleEntered = normalizedTransitionCallback(onEntered);
+  var handleExiting = normalizedTransitionCallback(onExiting);
+  var handleExit = normalizedTransitionCallback(function (node) {
+    var transitionProps = Object(_transitions_utils__WEBPACK_IMPORTED_MODULE_8__["getTransitionProps"])({
+      style: style,
+      timeout: timeout
+    }, {
+      mode: 'exit'
+    });
+    node.style.webkitTransition = theme.transitions.create('opacity', transitionProps);
+    node.style.transition = theme.transitions.create('opacity', transitionProps);
+
+    if (onExit) {
+      onExit(node);
+    }
+  });
+  var handleExited = normalizedTransitionCallback(onExited);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"](TransitionComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    appear: true,
+    in: inProp,
+    nodeRef: enableStrictModeCompat ? nodeRef : undefined,
+    onEnter: handleEnter,
+    onEntered: handleEntered,
+    onEntering: handleEntering,
+    onExit: handleExit,
+    onExited: handleExited,
+    onExiting: handleExiting,
+    timeout: timeout
+  }, other), function (state, childProps) {
+    return react__WEBPACK_IMPORTED_MODULE_3__["cloneElement"](children, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        opacity: 0,
+        visibility: state === 'exited' && !inProp ? 'hidden' : undefined
+      }, styles[state]), style), children.props.style),
+      ref: handleRef
+    }, childProps));
+  });
+});
+ true ? Fade.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * A single child content element.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.element,
+
+  /**
+   * Enable this prop if you encounter 'Function components cannot be given refs',
+   * use `unstable_createStrictModeTheme`,
+   * and can't forward the ref in the child component.
+   */
+  disableStrictModeCompat: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+
+  /**
+   * If `true`, the component will transition in.
+   */
+  in: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+
+  /**
+   * @ignore
+   */
+  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onExit: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onExited: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * @ignore
+   */
+  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+
+  /**
+   * @ignore
+   */
+  style: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+
+  /**
+   * The duration for the transition, in milliseconds.
+   * You may specify a single timeout for all transitions, or individually with an object.
+   */
+  timeout: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
+    appear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+    enter: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+    exit: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number
+  })])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Fade);
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Fade/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Fade/index.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fade */ "./node_modules/@material-ui/core/esm/Fade/Fade.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Fade__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
@@ -5393,6 +7379,345 @@ var InputLabel = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function Input
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _InputLabel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InputLabel */ "./node_modules/@material-ui/core/esm/InputLabel/InputLabel.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _InputLabel__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/LinearProgress/LinearProgress.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/LinearProgress/LinearProgress.js ***!
+  \*****************************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@material-ui/core/esm/utils/capitalize.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+/* harmony import */ var _styles_useTheme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/useTheme */ "./node_modules/@material-ui/core/esm/styles/useTheme.js");
+
+
+
+
+
+
+
+
+
+var TRANSITION_DURATION = 4; // seconds
+
+var styles = function styles(theme) {
+  var getColor = function getColor(color) {
+    return theme.palette.type === 'light' ? Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["lighten"])(color, 0.62) : Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["darken"])(color, 0.5);
+  };
+
+  var backgroundPrimary = getColor(theme.palette.primary.main);
+  var backgroundSecondary = getColor(theme.palette.secondary.main);
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      position: 'relative',
+      overflow: 'hidden',
+      height: 4,
+      '@media print': {
+        colorAdjust: 'exact'
+      }
+    },
+
+    /* Styles applied to the root and bar2 element if `color="primary"`; bar2 if `variant="buffer"`. */
+    colorPrimary: {
+      backgroundColor: backgroundPrimary
+    },
+
+    /* Styles applied to the root and bar2 elements if `color="secondary"`; bar2 if `variant="buffer"`. */
+    colorSecondary: {
+      backgroundColor: backgroundSecondary
+    },
+
+    /* Styles applied to the root element if `variant="determinate"`. */
+    determinate: {},
+
+    /* Styles applied to the root element if `variant="indeterminate"`. */
+    indeterminate: {},
+
+    /* Styles applied to the root element if `variant="buffer"`. */
+    buffer: {
+      backgroundColor: 'transparent'
+    },
+
+    /* Styles applied to the root element if `variant="query"`. */
+    query: {
+      transform: 'rotate(180deg)'
+    },
+
+    /* Styles applied to the additional bar element if `variant="buffer"`. */
+    dashed: {
+      position: 'absolute',
+      marginTop: 0,
+      height: '100%',
+      width: '100%',
+      animation: '$buffer 3s infinite linear'
+    },
+
+    /* Styles applied to the additional bar element if `variant="buffer"` and `color="primary"`. */
+    dashedColorPrimary: {
+      backgroundImage: "radial-gradient(".concat(backgroundPrimary, " 0%, ").concat(backgroundPrimary, " 16%, transparent 42%)"),
+      backgroundSize: '10px 10px',
+      backgroundPosition: '0px -23px'
+    },
+
+    /* Styles applied to the additional bar element if `variant="buffer"` and `color="secondary"`. */
+    dashedColorSecondary: {
+      backgroundImage: "radial-gradient(".concat(backgroundSecondary, " 0%, ").concat(backgroundSecondary, " 16%, transparent 42%)"),
+      backgroundSize: '10px 10px',
+      backgroundPosition: '0px -23px'
+    },
+
+    /* Styles applied to the layered bar1 and bar2 elements. */
+    bar: {
+      width: '100%',
+      position: 'absolute',
+      left: 0,
+      bottom: 0,
+      top: 0,
+      transition: 'transform 0.2s linear',
+      transformOrigin: 'left'
+    },
+
+    /* Styles applied to the bar elements if `color="primary"`; bar2 if `variant` not "buffer". */
+    barColorPrimary: {
+      backgroundColor: theme.palette.primary.main
+    },
+
+    /* Styles applied to the bar elements if `color="secondary"`; bar2 if `variant` not "buffer". */
+    barColorSecondary: {
+      backgroundColor: theme.palette.secondary.main
+    },
+
+    /* Styles applied to the bar1 element if `variant="indeterminate or query"`. */
+    bar1Indeterminate: {
+      width: 'auto',
+      animation: '$indeterminate1 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite'
+    },
+
+    /* Styles applied to the bar1 element if `variant="determinate"`. */
+    bar1Determinate: {
+      transition: "transform .".concat(TRANSITION_DURATION, "s linear")
+    },
+
+    /* Styles applied to the bar1 element if `variant="buffer"`. */
+    bar1Buffer: {
+      zIndex: 1,
+      transition: "transform .".concat(TRANSITION_DURATION, "s linear")
+    },
+
+    /* Styles applied to the bar2 element if `variant="indeterminate or query"`. */
+    bar2Indeterminate: {
+      width: 'auto',
+      animation: '$indeterminate2 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s infinite'
+    },
+
+    /* Styles applied to the bar2 element if `variant="buffer"`. */
+    bar2Buffer: {
+      transition: "transform .".concat(TRANSITION_DURATION, "s linear")
+    },
+    // Legends:
+    // || represents the viewport
+    // -  represents a light background
+    // x  represents a dark background
+    '@keyframes indeterminate1': {
+      //  |-----|---x-||-----||-----|
+      '0%': {
+        left: '-35%',
+        right: '100%'
+      },
+      //  |-----|-----||-----||xxxx-|
+      '60%': {
+        left: '100%',
+        right: '-90%'
+      },
+      '100%': {
+        left: '100%',
+        right: '-90%'
+      }
+    },
+    '@keyframes indeterminate2': {
+      //  |xxxxx|xxxxx||-----||-----|
+      '0%': {
+        left: '-200%',
+        right: '100%'
+      },
+      //  |-----|-----||-----||-x----|
+      '60%': {
+        left: '107%',
+        right: '-8%'
+      },
+      '100%': {
+        left: '107%',
+        right: '-8%'
+      }
+    },
+    '@keyframes buffer': {
+      '0%': {
+        opacity: 1,
+        backgroundPosition: '0px -23px'
+      },
+      '50%': {
+        opacity: 0,
+        backgroundPosition: '0px -23px'
+      },
+      '100%': {
+        opacity: 1,
+        backgroundPosition: '-200px -23px'
+      }
+    }
+  };
+};
+/**
+ * ## ARIA
+ *
+ * If the progress bar is describing the loading progress of a particular region of a page,
+ * you should use `aria-describedby` to point to the progress bar, and set the `aria-busy`
+ * attribute to `true` on that region until it has finished loading.
+ */
+
+var LinearProgress = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function LinearProgress(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'primary' : _props$color,
+      value = props.value,
+      valueBuffer = props.valueBuffer,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'indeterminate' : _props$variant,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["classes", "className", "color", "value", "valueBuffer", "variant"]);
+
+  var theme = Object(_styles_useTheme__WEBPACK_IMPORTED_MODULE_8__["default"])();
+  var rootProps = {};
+  var inlineStyles = {
+    bar1: {},
+    bar2: {}
+  };
+
+  if (variant === 'determinate' || variant === 'buffer') {
+    if (value !== undefined) {
+      rootProps['aria-valuenow'] = Math.round(value);
+      var transform = value - 100;
+
+      if (theme.direction === 'rtl') {
+        transform = -transform;
+      }
+
+      inlineStyles.bar1.transform = "translateX(".concat(transform, "%)");
+    } else if (true) {
+      console.error('Material-UI: You need to provide a value prop ' + 'when using the determinate or buffer variant of LinearProgress .');
+    }
+  }
+
+  if (variant === 'buffer') {
+    if (valueBuffer !== undefined) {
+      var _transform = (valueBuffer || 0) - 100;
+
+      if (theme.direction === 'rtl') {
+        _transform = -_transform;
+      }
+
+      inlineStyles.bar2.transform = "translateX(".concat(_transform, "%)");
+    } else if (true) {
+      console.error('Material-UI: You need to provide a valueBuffer prop ' + 'when using the buffer variant of LinearProgress.');
+    }
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, classes["color".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(color))], className, {
+      'determinate': classes.determinate,
+      'indeterminate': classes.indeterminate,
+      'buffer': classes.buffer,
+      'query': classes.query
+    }[variant]),
+    role: "progressbar"
+  }, rootProps, {
+    ref: ref
+  }, other), variant === 'buffer' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.dashed, classes["dashedColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(color))])
+  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.bar, classes["barColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(color))], (variant === 'indeterminate' || variant === 'query') && classes.bar1Indeterminate, {
+      'determinate': classes.bar1Determinate,
+      'buffer': classes.bar1Buffer
+    }[variant]),
+    style: inlineStyles.bar1
+  }), variant === 'determinate' ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.bar, (variant === 'indeterminate' || variant === 'query') && classes.bar2Indeterminate, variant === 'buffer' ? [classes["color".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(color))], classes.bar2Buffer] : classes["barColor".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(color))]),
+    style: inlineStyles.bar2
+  }));
+});
+ true ? LinearProgress.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+  color: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['primary', 'secondary']),
+
+  /**
+   * The value of the progress indicator for the determinate and buffer variants.
+   * Value between 0 and 100.
+   */
+  value: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
+
+  /**
+   * The value for the buffer variant.
+   * Value between 0 and 100.
+   */
+  valueBuffer: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
+
+  /**
+   * The variant to use.
+   * Use indeterminate or query when there is no progress value.
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['buffer', 'determinate', 'indeterminate', 'query'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_6__["default"])(styles, {
+  name: 'MuiLinearProgress'
+})(LinearProgress));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/LinearProgress/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/LinearProgress/index.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _LinearProgress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LinearProgress */ "./node_modules/@material-ui/core/esm/LinearProgress/LinearProgress.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _LinearProgress__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
@@ -10340,6 +12665,891 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/esm/Table/Table.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Table/Table.js ***!
+  \***********************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _TableContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TableContext */ "./node_modules/@material-ui/core/esm/Table/TableContext.js");
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      display: 'table',
+      width: '100%',
+      borderCollapse: 'collapse',
+      borderSpacing: 0,
+      '& caption': Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, theme.typography.body2), {}, {
+        padding: theme.spacing(2),
+        color: theme.palette.text.secondary,
+        textAlign: 'left',
+        captionSide: 'bottom'
+      })
+    },
+
+    /* Styles applied to the root element if `stickyHeader={true}`. */
+    stickyHeader: {
+      borderCollapse: 'separate'
+    }
+  };
+};
+var defaultComponent = 'table';
+var Table = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function Table(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? defaultComponent : _props$component,
+      _props$padding = props.padding,
+      padding = _props$padding === void 0 ? 'default' : _props$padding,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'medium' : _props$size,
+      _props$stickyHeader = props.stickyHeader,
+      stickyHeader = _props$stickyHeader === void 0 ? false : _props$stickyHeader,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(props, ["classes", "className", "component", "padding", "size", "stickyHeader"]);
+
+  var table = react__WEBPACK_IMPORTED_MODULE_2__["useMemo"](function () {
+    return {
+      padding: padding,
+      size: size,
+      stickyHeader: stickyHeader
+    };
+  }, [padding, size, stickyHeader]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_TableContext__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
+    value: table
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    role: Component === defaultComponent ? null : 'table',
+    ref: ref,
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, stickyHeader && classes.stickyHeader)
+  }, other)));
+});
+ true ? Table.propTypes = {
+  /**
+   * The content of the table, normally `TableHead` and `TableBody`.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node.isRequired,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType,
+
+  /**
+   * Allows TableCells to inherit padding of the Table.
+   */
+  padding: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['default', 'checkbox', 'none']),
+
+  /**
+   * Allows TableCells to inherit size of the Table.
+   */
+  size: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['small', 'medium']),
+
+  /**
+   * Set the header sticky.
+   *
+   * ⚠️ It doesn't work with IE 11.
+   */
+  stickyHeader: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiTable'
+})(Table));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Table/TableContext.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Table/TableContext.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/**
+ * @ignore - internal component.
+ */
+
+var TableContext = react__WEBPACK_IMPORTED_MODULE_0__["createContext"]();
+
+if (true) {
+  TableContext.displayName = 'TableContext';
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (TableContext);
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Table/Tablelvl2Context.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Table/Tablelvl2Context.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/**
+ * @ignore - internal component.
+ */
+
+var Tablelvl2Context = react__WEBPACK_IMPORTED_MODULE_0__["createContext"]();
+
+if (true) {
+  Tablelvl2Context.displayName = 'Tablelvl2Context';
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Tablelvl2Context);
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Table/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Table/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Table__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Table__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableBody/TableBody.js ***!
+  \*******************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Table/Tablelvl2Context */ "./node_modules/@material-ui/core/esm/Table/Tablelvl2Context.js");
+
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    display: 'table-row-group'
+  }
+};
+var tablelvl2 = {
+  variant: 'body'
+};
+var defaultComponent = 'tbody';
+var TableBody = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function TableBody(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? defaultComponent : _props$component,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["classes", "className", "component"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
+    value: tablelvl2
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className),
+    ref: ref,
+    role: Component === defaultComponent ? null : 'rowgroup'
+  }, other)));
+});
+ true ? TableBody.propTypes = {
+  /**
+   * The content of the component, normally `TableRow`.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiTableBody'
+})(TableBody));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableBody/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableBody/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TableBody__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _TableBody__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableCell/TableCell.js ***!
+  \*******************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@material-ui/core/esm/utils/capitalize.js");
+/* harmony import */ var _styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+/* harmony import */ var _Table_TableContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Table/TableContext */ "./node_modules/@material-ui/core/esm/Table/TableContext.js");
+/* harmony import */ var _Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Table/Tablelvl2Context */ "./node_modules/@material-ui/core/esm/Table/Tablelvl2Context.js");
+
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, theme.typography.body2), {}, {
+      display: 'table-cell',
+      verticalAlign: 'inherit',
+      // Workaround for a rendering bug with spanned columns in Chrome 62.0.
+      // Removes the alpha (sets it to 1), and lightens or darkens the theme color.
+      borderBottom: "1px solid\n    ".concat(theme.palette.type === 'light' ? Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["lighten"])(Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.divider, 1), 0.88) : Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["darken"])(Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.divider, 1), 0.68)),
+      textAlign: 'left',
+      padding: 16
+    }),
+
+    /* Styles applied to the root element if `variant="head"` or `context.table.head`. */
+    head: {
+      color: theme.palette.text.primary,
+      lineHeight: theme.typography.pxToRem(24),
+      fontWeight: theme.typography.fontWeightMedium
+    },
+
+    /* Styles applied to the root element if `variant="body"` or `context.table.body`. */
+    body: {
+      color: theme.palette.text.primary
+    },
+
+    /* Styles applied to the root element if `variant="footer"` or `context.table.footer`. */
+    footer: {
+      color: theme.palette.text.secondary,
+      lineHeight: theme.typography.pxToRem(21),
+      fontSize: theme.typography.pxToRem(12)
+    },
+
+    /* Styles applied to the root element if `size="small"`. */
+    sizeSmall: {
+      padding: '6px 24px 6px 16px',
+      '&:last-child': {
+        paddingRight: 16
+      },
+      '&$paddingCheckbox': {
+        width: 24,
+        // prevent the checkbox column from growing
+        padding: '0px 12px 0 16px',
+        '&:last-child': {
+          paddingLeft: 12,
+          paddingRight: 16
+        },
+        '& > *': {
+          padding: 0
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `padding="checkbox"`. */
+    paddingCheckbox: {
+      width: 48,
+      // prevent the checkbox column from growing
+      padding: '0 0 0 4px',
+      '&:last-child': {
+        paddingLeft: 0,
+        paddingRight: 4
+      }
+    },
+
+    /* Styles applied to the root element if `padding="none"`. */
+    paddingNone: {
+      padding: 0,
+      '&:last-child': {
+        padding: 0
+      }
+    },
+
+    /* Styles applied to the root element if `align="left"`. */
+    alignLeft: {
+      textAlign: 'left'
+    },
+
+    /* Styles applied to the root element if `align="center"`. */
+    alignCenter: {
+      textAlign: 'center'
+    },
+
+    /* Styles applied to the root element if `align="right"`. */
+    alignRight: {
+      textAlign: 'right',
+      flexDirection: 'row-reverse'
+    },
+
+    /* Styles applied to the root element if `align="justify"`. */
+    alignJustify: {
+      textAlign: 'justify'
+    },
+
+    /* Styles applied to the root element if `context.table.stickyHeader={true}`. */
+    stickyHeader: {
+      position: 'sticky',
+      top: 0,
+      left: 0,
+      zIndex: 2,
+      backgroundColor: theme.palette.background.default
+    }
+  };
+};
+/**
+ * The component renders a `<th>` element when the parent context is a header
+ * or otherwise a `<td>` element.
+ */
+
+var TableCell = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function TableCell(props, ref) {
+  var _props$align = props.align,
+      align = _props$align === void 0 ? 'inherit' : _props$align,
+      classes = props.classes,
+      className = props.className,
+      component = props.component,
+      paddingProp = props.padding,
+      scopeProp = props.scope,
+      sizeProp = props.size,
+      sortDirection = props.sortDirection,
+      variantProp = props.variant,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(props, ["align", "classes", "className", "component", "padding", "scope", "size", "sortDirection", "variant"]);
+
+  var table = react__WEBPACK_IMPORTED_MODULE_2__["useContext"](_Table_TableContext__WEBPACK_IMPORTED_MODULE_8__["default"]);
+  var tablelvl2 = react__WEBPACK_IMPORTED_MODULE_2__["useContext"](_Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_9__["default"]);
+  var isHeadCell = tablelvl2 && tablelvl2.variant === 'head';
+  var role;
+  var Component;
+
+  if (component) {
+    Component = component;
+    role = isHeadCell ? 'columnheader' : 'cell';
+  } else {
+    Component = isHeadCell ? 'th' : 'td';
+  }
+
+  var scope = scopeProp;
+
+  if (!scope && isHeadCell) {
+    scope = 'col';
+  }
+
+  var padding = paddingProp || (table && table.padding ? table.padding : 'default');
+  var size = sizeProp || (table && table.size ? table.size : 'medium');
+  var variant = variantProp || tablelvl2 && tablelvl2.variant;
+  var ariaSort = null;
+
+  if (sortDirection) {
+    ariaSort = sortDirection === 'asc' ? 'ascending' : 'descending';
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    ref: ref,
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, classes[variant], className, align !== 'inherit' && classes["align".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(align))], padding !== 'default' && classes["padding".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(padding))], size !== 'medium' && classes["size".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(size))], variant === 'head' && table && table.stickyHeader && classes.stickyHeader),
+    "aria-sort": ariaSort,
+    role: role,
+    scope: scope
+  }, other));
+});
+ true ? TableCell.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * Set the text-align on the table cell content.
+   *
+   * Monetary or generally number fields **should be right aligned** as that allows
+   * you to add them up quickly in your head without having to worry about decimals.
+   */
+  align: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['center', 'inherit', 'justify', 'left', 'right']),
+
+  /**
+   * The table cell contents.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType,
+
+  /**
+   * Sets the padding applied to the cell.
+   * By default, the Table parent component set the value (`default`).
+   */
+  padding: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['checkbox', 'default', 'none']),
+
+  /**
+   * Set scope attribute.
+   */
+  scope: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * Specify the size of the cell.
+   * By default, the Table parent component set the value (`medium`).
+   */
+  size: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['medium', 'small']),
+
+  /**
+   * Set aria-sort direction.
+   */
+  sortDirection: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['asc', 'desc', false]),
+
+  /**
+   * Specify the cell type.
+   * By default, the TableHead, TableBody or TableFooter parent component set the value.
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['body', 'footer', 'head'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiTableCell'
+})(TableCell));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableCell/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableCell/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TableCell__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _TableCell__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js ***!
+  \*****************************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    width: '100%',
+    overflowX: 'auto'
+  }
+};
+var TableContainer = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function TableContainer(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'div' : _props$component,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["classes", "className", "component"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    ref: ref,
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className)
+  }, other));
+});
+ true ? TableContainer.propTypes = {
+  /**
+   * The table itself, normally `<Table />`
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiTableContainer'
+})(TableContainer));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableContainer/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableContainer/index.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TableContainer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _TableContainer__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableHead/TableHead.js ***!
+  \*******************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Table/Tablelvl2Context */ "./node_modules/@material-ui/core/esm/Table/Tablelvl2Context.js");
+
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    display: 'table-header-group'
+  }
+};
+var tablelvl2 = {
+  variant: 'head'
+};
+var defaultComponent = 'thead';
+var TableHead = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function TableHead(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? defaultComponent : _props$component,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["classes", "className", "component"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
+    value: tablelvl2
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className),
+    ref: ref,
+    role: Component === defaultComponent ? null : 'rowgroup'
+  }, other)));
+});
+ true ? TableHead.propTypes = {
+  /**
+   * The content of the component, normally `TableRow`.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiTableHead'
+})(TableHead));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableHead/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableHead/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TableHead__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _TableHead__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableRow/TableRow.js ***!
+  \*****************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Table/Tablelvl2Context */ "./node_modules/@material-ui/core/esm/Table/Tablelvl2Context.js");
+/* harmony import */ var _styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      color: 'inherit',
+      display: 'table-row',
+      verticalAlign: 'middle',
+      // We disable the focus ring for mouse, touch and keyboard users.
+      outline: 0,
+      '&$hover:hover': {
+        backgroundColor: theme.palette.action.hover
+      },
+      '&$selected, &$selected:hover': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.secondary.main, theme.palette.action.selectedOpacity)
+      }
+    },
+
+    /* Pseudo-class applied to the root element if `selected={true}`. */
+    selected: {},
+
+    /* Pseudo-class applied to the root element if `hover={true}`. */
+    hover: {},
+
+    /* Styles applied to the root element if table variant="head". */
+    head: {},
+
+    /* Styles applied to the root element if table variant="footer". */
+    footer: {}
+  };
+};
+var defaultComponent = 'tr';
+/**
+ * Will automatically set dynamic row height
+ * based on the material table element parent (head, body, etc).
+ */
+
+var TableRow = react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function TableRow(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? defaultComponent : _props$component,
+      _props$hover = props.hover,
+      hover = _props$hover === void 0 ? false : _props$hover,
+      _props$selected = props.selected,
+      selected = _props$selected === void 0 ? false : _props$selected,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["classes", "className", "component", "hover", "selected"]);
+
+  var tablelvl2 = react__WEBPACK_IMPORTED_MODULE_2__["useContext"](_Table_Tablelvl2Context__WEBPACK_IMPORTED_MODULE_6__["default"]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    ref: ref,
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, tablelvl2 && {
+      'head': classes.head,
+      'footer': classes.footer
+    }[tablelvl2.variant], hover && classes.hover, selected && classes.selected),
+    role: Component === defaultComponent ? null : 'row'
+  }, other));
+});
+ true ? TableRow.propTypes = {
+  /**
+   * Should be valid <tr> children such as `TableCell`.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.elementType,
+
+  /**
+   * If `true`, the table row will shade on hover.
+   */
+  hover: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the table row will have the selected shading.
+   */
+  selected: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiTableRow'
+})(TableRow));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/TableRow/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/TableRow/index.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TableRow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _TableRow__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/esm/TextField/TextField.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/TextField/TextField.js ***!
@@ -11657,6 +14867,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (Object(_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
   d: "M7 10l5 5 5-5z"
 }), 'ArrowDropDown'));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/internal/svg-icons/Cancel.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/internal/svg-icons/Cancel.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/createSvgIcon */ "./node_modules/@material-ui/core/esm/utils/createSvgIcon.js");
+
+
+/**
+ * @ignore - internal component.
+ */
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  d: "M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+}), 'Cancel'));
 
 /***/ }),
 
@@ -14136,6 +17370,35 @@ function useIsFocusVisible() {
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/Add.js":
+/*!************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Add.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+}), 'Add');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/Home.js":
 /*!*************************************************!*\
   !*** ./node_modules/@material-ui/icons/Home.js ***!
@@ -14160,6 +17423,64 @@ var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/crea
 var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
   d: "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
 }), 'Home');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/InsertEmoticon.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/InsertEmoticon.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"
+}), 'InsertEmoticon');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/Person.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Person.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+}), 'Person');
 
 exports.default = _default;
 
@@ -93595,6 +96916,746 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/resolve-pathname/esm/resolve-pathname.js":
 /*!***************************************************************!*\
   !*** ./node_modules/resolve-pathname/esm/resolve-pathname.js ***!
@@ -95710,6 +99771,8 @@ __webpack_require__(/*! ./components/RegisterComponent */ "./resources/js/compon
 
 __webpack_require__(/*! ./components/LoginComponent */ "./resources/js/components/LoginComponent.js");
 
+__webpack_require__(/*! ./components/UserComponent */ "./resources/js/components/UserComponent.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -95761,24 +99824,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!**************************************************!*\
   !*** ./resources/js/components/AuthFunctions.js ***!
   \**************************************************/
-/*! exports provided: register, login */
+/*! exports provided: register, login, getUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUser", function() { return getUser; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
 var register = function register(newUser) {
   console.log(newUser);
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/auth/register', {
-    role_id: 2,
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/auth/signup', {
     first_name: newUser.first_name,
     last_name: newUser.last_name,
     email: newUser.email,
-    password: newUser.password
+    password: newUser.password,
+    password_confirmation: newUser.password
   }).then(function (response) {
     return response.data;
   });
@@ -95788,7 +99852,22 @@ var login = function login(user) {
     email: user.email,
     password: user.password
   }).then(function (response) {
-    localStorage.setItem('usertoken', response.data);
+    localStorage.setItem('isAuthenticated', true);
+    localStorage.setItem('usertoken', response.data.access_token);
+    localStorage.setItem('rol', response.data.rol);
+    localStorage.setItem('userId', response.data.id);
+    return response.data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var getUser = function getUser() {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/auth/user', {
+    headers: {
+      Authorization: 'Bearer ' + localStorage.getItem('usertoken')
+    }
+  }).then(function (response) {
+    //console.log(response.data)
     return response.data;
   })["catch"](function (err) {
     console.log(err);
@@ -95882,18 +99961,14 @@ function Home(props) {
     align: "center",
     variant: "h5",
     className: classes.h5
-  }, "React Js con Laravel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-    className: classes.link,
-    to: "/register",
-    color: "inherit"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "React Js con Laravel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     color: "secondary",
     variant: "contained",
     size: "large",
     className: classes.button,
     component: "a",
-    onClick: handleClick
-  }, "Registrarse"))));
+    href: "/register"
+  }, "Registrarse"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -96062,7 +100137,9 @@ function Login() {
       password: values.password
     };
     Object(_AuthFunctions__WEBPACK_IMPORTED_MODULE_1__["login"])(user).then(function (res) {
-      if (res) {}
+      if (res) {
+        console.log(res);
+      }
     });
   };
 
@@ -96358,22 +100435,17 @@ function Navbar() {
     position: "static"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.menu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: classes.link,
-    to: "/"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    href: "/",
     edge: "start",
     className: classes.menuButton,
     color: "inherit",
     "aria-label": "menu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_7___default.a, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: classes.link,
-    to: "/login",
-    color: "inherit"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_7___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    href: "/login",
     className: classes.button,
     color: "inherit"
-  }, "Iniciar Sesi\xF3n"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)));
+  }, "Iniciar Sesi\xF3n")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -96471,6 +100543,524 @@ ProductHeroLayout.propTypes = {
   classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["withStyles"])(styles)(ProductHeroLayout));
+
+/***/ }),
+
+/***/ "./resources/js/components/Profile.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/Profile.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/index.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/index.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/index.js");
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/index.js");
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/index.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/index.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/index.js");
+/* harmony import */ var _TicketFunctions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./TicketFunctions */ "./resources/js/components/TicketFunctions.js");
+/* harmony import */ var _AuthFunctions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./AuthFunctions */ "./resources/js/components/AuthFunctions.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _material_ui_core_Chip__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Chip */ "./node_modules/@material-ui/core/esm/Chip/index.js");
+/* harmony import */ var _material_ui_icons_InsertEmoticon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/icons/InsertEmoticon */ "./node_modules/@material-ui/icons/InsertEmoticon.js");
+/* harmony import */ var _material_ui_icons_InsertEmoticon__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_InsertEmoticon__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _material_ui_core_Fab__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/Fab */ "./node_modules/@material-ui/core/esm/Fab/index.js");
+/* harmony import */ var _material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/icons/Add */ "./node_modules/@material-ui/icons/Add.js");
+/* harmony import */ var _material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/index.js");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/index.js");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/index.js");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _material_ui_core_LinearProgress__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @material-ui/core/LinearProgress */ "./node_modules/@material-ui/core/esm/LinearProgress/index.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["makeStyles"])(function (theme) {
+  return {
+    table: {
+      minWidth: 650
+    },
+    header: {
+      padding: '1em',
+      marginBottom: '2em',
+      background: '#fff5f8'
+    },
+    root: {
+      '& > *': {
+        margin: theme.spacing(1)
+      },
+      position: 'relative'
+    },
+    buttonAdd: {
+      position: 'absolute',
+      right: '0px',
+      bottom: '0px'
+    },
+    divTable: {
+      width: '70%',
+      margin: 'auto'
+    },
+    margin: {
+      margin: theme.spacing(1)
+    },
+    statusTrue: {
+      backgroundColor: '#34a53494',
+      color: 'white',
+      padding: '3px',
+      '&:hover, &:focus': {
+        backgroundColor: '#34a53494'
+      }
+    },
+    statusFalse: {
+      backgroundColor: '#f44336',
+      color: 'white',
+      padding: '3px',
+      '&:hover, &:focus': {
+        backgroundColor: '#f44336'
+      }
+    },
+    progress: {
+      width: '100%',
+      '& > * + *': {
+        marginTop: theme.spacing(2)
+      }
+    }
+  };
+});
+
+function Profile() {
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_23__["useHistory"])();
+  if (localStorage.getItem('rol') != "user") history.push("/profile-admin");
+  var classes = useStyles();
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState([]),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      rows = _React$useState2[0],
+      setRows = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      open = _React$useState4[0],
+      setOpen = _React$useState4[1];
+
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      openEdit = _React$useState6[0],
+      setOpenEdit = _React$useState6[1];
+
+  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(''),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      issue = _React$useState8[0],
+      setIssue = _React$useState8[1];
+
+  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(''),
+      _React$useState10 = _slicedToArray(_React$useState9, 2),
+      ticketId = _React$useState10[0],
+      setTicketId = _React$useState10[1];
+
+  var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(0),
+      _React$useState12 = _slicedToArray(_React$useState11, 2),
+      update = _React$useState12[0],
+      setUpdate = _React$useState12[1];
+
+  var _React$useState13 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(true),
+      _React$useState14 = _slicedToArray(_React$useState13, 2),
+      showProgress = _React$useState14[0],
+      setShowProgress = _React$useState14[1];
+
+  var _React$useState15 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
+    id: null,
+    first_name: null,
+    last_name: null,
+    email: null
+  }),
+      _React$useState16 = _slicedToArray(_React$useState15, 2),
+      user = _React$useState16[0],
+      setUser = _React$useState16[1];
+
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    userTickets();
+
+    function userTickets() {
+      return _userTickets.apply(this, arguments);
+    }
+
+    function _userTickets() {
+      _userTickets = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                setShowProgress(true);
+                Object(_AuthFunctions__WEBPACK_IMPORTED_MODULE_11__["getUser"])().then(function (user) {
+                  console.log(user);
+                  setUser(user);
+                  Object(_TicketFunctions__WEBPACK_IMPORTED_MODULE_10__["getUserTickets"])(user.id).then(function (tickets) {
+                    console.log(tickets);
+                    setRows(tickets);
+                    setShowProgress(false);
+                  });
+                });
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+      return _userTickets.apply(this, arguments);
+    }
+  }, [update]);
+
+  var setValues = function setValues() {
+    setIssue('');
+    setOpen(false);
+    setOpenEdit(false);
+  };
+
+  var handleClickOpen = function handleClickOpen() {
+    setOpen(true);
+  };
+
+  var handleClose = function handleClose() {
+    setValues();
+  };
+
+  var handleCreateTicket = function handleCreateTicket() {
+    var ticket = {
+      issue: issue,
+      user_id: user.id
+    };
+    setShowProgress(true);
+    Object(_TicketFunctions__WEBPACK_IMPORTED_MODULE_10__["createTicket"])(ticket).then(function () {
+      setShowProgress(false);
+    });
+    setValues();
+    setUpdate(update + 1);
+  };
+
+  var handleChangeStatus = function handleChangeStatus(id, status) {
+    console.log(id);
+    if (status == 1) status = 0;else status = 1;
+    var ticket = {
+      id: id,
+      status: status
+    };
+    setShowProgress(true);
+    Object(_TicketFunctions__WEBPACK_IMPORTED_MODULE_10__["updateStatusTicket"])(ticket).then(function () {
+      setShowProgress(false);
+    });
+    setValues();
+    setUpdate(update + 1);
+  };
+
+  var handleChangeIssue = function handleChangeIssue(event) {
+    setIssue(event.target.value);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, showProgress && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_LinearProgress__WEBPACK_IMPORTED_MODULE_24__["default"], {
+    color: "secondary"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    className: classes.header,
+    variant: "h4",
+    gutterBottom: true,
+    marked: "left",
+    align: "left"
+  }, "Tickets"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: classes.divTable
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    component: _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: classes.table,
+    "aria-label": "simple table"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], null, "Asunto"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], null, "Creado"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: classes.root
+  }, "Estado", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Fab__WEBPACK_IMPORTED_MODULE_15__["default"], {
+    size: "small",
+    className: classes.buttonAdd,
+    color: "primary",
+    "aria-label": "add",
+    onClick: handleClickOpen
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_16___default.a, null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_4__["default"], null, rows.map(function (row) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      key: row.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], null, row.issue), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], null, row.created), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5__["default"], null, row.status ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Chip__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      onClick: function onClick() {
+        return handleChangeStatus(row.id, row.status);
+      },
+      label: "Pendiente",
+      className: classes.statusFalse
+    }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Chip__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      onClick: function onClick() {
+        return handleChangeStatus(row.id, row.status);
+      },
+      label: "Recibido",
+      className: classes.statusTrue
+    })));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_19__["default"], {
+    open: open,
+    onClose: handleClose,
+    "aria-labelledby": "form-dialog-title",
+    fullWidth: "600px"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_22__["default"], {
+    id: "form-dialog-title"
+  }, "Agregar Ticket"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_21__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_18__["default"], {
+    autoFocus: true,
+    margin: "dense",
+    id: "issue",
+    value: issue,
+    onChange: handleChangeIssue,
+    label: "Asunto",
+    type: "text",
+    fullWidth: true
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_20__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__["default"], {
+    onClick: handleClose,
+    color: "primary"
+  }, "Cancelar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__["default"], {
+    onClick: handleCreateTicket,
+    color: "primary"
+  }, "Agregar")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Profile);
+
+/***/ }),
+
+/***/ "./resources/js/components/ProfileNavbar.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/ProfileNavbar.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/AppBar */ "./node_modules/@material-ui/core/esm/AppBar/index.js");
+/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "./node_modules/@material-ui/core/esm/Toolbar/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _material_ui_icons_Person__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/Person */ "./node_modules/@material-ui/icons/Person.js");
+/* harmony import */ var _material_ui_icons_Person__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Person__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _AuthFunctions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./AuthFunctions */ "./resources/js/components/AuthFunctions.js");
+/* harmony import */ var _material_ui_core_LinearProgress__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/LinearProgress */ "./node_modules/@material-ui/core/esm/LinearProgress/index.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["makeStyles"])(function (theme) {
+  return {
+    root: {
+      flexGrow: 1,
+      background: '#e85380',
+      height: '80px'
+    },
+    menuButton: {
+      marginRight: theme.spacing(2)
+    },
+    link: {
+      textDecoration: 'inherit',
+      color: 'inherit',
+      '&:focus, &:hover, &:visited, &:link, &:active': {
+        textDecoration: 'none'
+      }
+    },
+    menu: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '100%'
+    },
+    button: {
+      marginTop: '10px'
+    },
+    header: {
+      marginTop: '8px'
+    },
+    progress: {
+      width: '100%',
+      '& > * + *': {
+        marginTop: theme.spacing(2)
+      }
+    }
+  };
+});
+
+function ProfileNavbar() {
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"])();
+  var classes = useStyles();
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(true),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      showProgress = _React$useState2[0],
+      setShowProgress = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
+    id: null,
+    first_name: null,
+    last_name: null,
+    email: null
+  }),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      user = _React$useState4[0],
+      setUser = _React$useState4[1];
+
+  var handleLogOut = function handleLogOut() {
+    localStorage.removeItem('usertoken');
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('rol');
+    localStorage.removeItem('userId');
+    history.push("/");
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    userTickets();
+
+    function userTickets() {
+      return _userTickets.apply(this, arguments);
+    }
+
+    function _userTickets() {
+      _userTickets = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                Object(_AuthFunctions__WEBPACK_IMPORTED_MODULE_9__["getUser"])().then(function (user) {
+                  setUser(user);
+                  setShowProgress(false);
+                });
+
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+      return _userTickets.apply(this, arguments);
+    }
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: classes.root
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: classes.progress
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    position: "static"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: classes.menu
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    className: classes.header,
+    variant: "button",
+    display: "block",
+    gutterBottom: true,
+    marked: "left",
+    align: "left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_icons_Person__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    style: {
+      position: 'relative',
+      top: '3px'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    style: {
+      margin: '12px'
+    }
+  }, user.first_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, user.last_name, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    href: "/login",
+    className: classes.button,
+    onClick: handleLogOut,
+    color: "inherit"
+  }, "Cerrar Sesi\xF3n")))), showProgress && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_LinearProgress__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    color: "secondary"
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ProfileNavbar);
 
 /***/ }),
 
@@ -96573,7 +101163,8 @@ function Register() {
       password: values.password
     };
     Object(_AuthFunctions__WEBPACK_IMPORTED_MODULE_1__["register"])(user).then(function (res) {
-      if (res) {//useHistory.push("/login");
+      if (res) {
+        console.log(res);
       }
     });
   };
@@ -96736,6 +101327,164 @@ var RegisterComponent = /*#__PURE__*/function (_Component) {
 
 if (document.getElementById('register')) {
   react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RegisterComponent, null), document.getElementById('register'));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/TicketFunctions.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/TicketFunctions.js ***!
+  \****************************************************/
+/*! exports provided: createTicket, getTickets, getTicket, getAllUserTickets, getUserTickets, updateStatusTicket, updateTicket, removeTicket */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTicket", function() { return createTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTickets", function() { return getTickets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTicket", function() { return getTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllUserTickets", function() { return getAllUserTickets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserTickets", function() { return getUserTickets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateStatusTicket", function() { return updateStatusTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTicket", function() { return updateTicket; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeTicket", function() { return removeTicket; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var createTicket = function createTicket(newTicket) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/ticket/create', {
+    user_id: newTicket.user_id,
+    issue: newTicket.issue,
+    status: 0
+  }).then(function (response) {
+    console.log('Ticket Guardado');
+  });
+};
+var getTickets = function getTickets() {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/ticket/list').then(function (response) {
+    console.log(response.data);
+    return response.data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var getTicket = function getTicket(id) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/ticket/find/' + id).then(function (response) {
+    return response.data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var getAllUserTickets = function getAllUserTickets() {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/ticket/all_user_tickets').then(function (response) {
+    return response.data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var getUserTickets = function getUserTickets(id) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/ticket/user_tickets/' + id).then(function (response) {
+    return response.data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var updateStatusTicket = function updateStatusTicket(ticket) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put('api/ticket/update_status/' + ticket.id, {
+    status: ticket.status
+  }).then(function (response) {
+    console.log('Ticket actualizado');
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var updateTicket = function updateTicket(ticket) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put('http://test-api/api/ticket/update/' + ticket.id, {
+    user_id: ticket.user_id,
+    issue: ticket.issue
+  }).then(function (response) {
+    console.log(response);
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var removeTicket = function removeTicket(id) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]('http://test-api/api/ticket/delete/' + id).then(function (response) {
+    console.log('Ticket Eliminado');
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+
+/***/ }),
+
+/***/ "./resources/js/components/UserComponent.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/UserComponent.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Profile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Profile */ "./resources/js/components/Profile.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProfileNavbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProfileNavbar */ "./resources/js/components/ProfileNavbar.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+var UserComponent = /*#__PURE__*/function (_Component) {
+  _inherits(UserComponent, _Component);
+
+  var _super = _createSuper(UserComponent);
+
+  function UserComponent() {
+    _classCallCheck(this, UserComponent);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(UserComponent, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileNavbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Profile__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    }
+  }]);
+
+  return UserComponent;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (UserComponent);
+
+if (document.getElementById('user')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserComponent, null), document.getElementById('user'));
 }
 
 /***/ }),

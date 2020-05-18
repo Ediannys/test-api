@@ -46,14 +46,12 @@ function Navbar() {
       <Toolbar >
          <div className={classes.menu}>
             <Router>
-               <Link className={classes.link} to="/">
-               <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+               <IconButton href="/" edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                   <HomeIcon />
                </IconButton>
-               </Link>
-               <Link className={classes.link} to="/login" color="inherit" >
-               <Button className={classes.button} color="inherit">Iniciar Sesión</Button>
-               </Link>
+              
+               <Button href="/login" className={classes.button} color="inherit">Iniciar Sesión</Button>
+            
             </Router>
          </div>
       </Toolbar>

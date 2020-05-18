@@ -50,7 +50,14 @@ class TicketController extends Controller
         
     }
 
-    public function list_user_tickets($id){
+    public function user_tickets($id){
+
+        $query = Ticket::where('user_id','=',$id)->get();
+        return $query;
+  
+    }
+
+    public function all_user_tickets(){
 
         $query = Ticket::join('users', 'user_id', '=', 'users.id')->get();
         return $query;

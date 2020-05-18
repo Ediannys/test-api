@@ -72,7 +72,7 @@ function Register() {
     
     register(user).then(res=>{
       if(res){
-        //useHistory.push("/login");
+        console.log(res)
       }
     })
 
