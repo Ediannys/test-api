@@ -102693,7 +102693,7 @@ var createTicket = function createTicket(newTicket) {
   return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/ticket/create', {
     user_id: newTicket.user_id,
     issue: newTicket.issue,
-    status: 0
+    status: 1
   }).then(function (response) {
     console.log('Ticket Guardado');
   });

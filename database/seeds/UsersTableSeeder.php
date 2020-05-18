@@ -13,20 +13,19 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $admin= User::create([
-        	'name' =>'admin',
+            'first_name' =>'admin',
+            'last_name' =>'admin',
             'email' =>'admin@mail.com',
         	'password' => bcrypt('secret'),
-            'activation_token'=> str_random(60),
-
             ]);
 
         $admin->assignRole('admin');
 
         $admin= User::create([
-        	'name' =>'Tyrion',
+            'first_name' =>'Tyrion',
+            'last_name' =>'Lannister',
             'email' =>'lannister@mail.com',
         	'password' => bcrypt('123456'),
-            'activation_token'=> str_random(60),
             ]);
 
         $admin->assignRole('user');

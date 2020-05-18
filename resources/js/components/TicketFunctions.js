@@ -6,7 +6,7 @@ export const createTicket = newTicket => {
     .post('api/ticket/create', {
       user_id: newTicket.user_id,
       issue: newTicket.issue,
-      status: 0, 
+      status: 1, 
     })
     .then(response => {
       console.log('Ticket Guardado')

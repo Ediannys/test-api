@@ -12,25 +12,25 @@ class TicketsTableSeeder extends Seeder
     public function run()
     {
         $ticket= Ticket::create([
-            'use_id' =>'2',
+            'user_id' =>'2',
             'issue' =>'Vientos de invierno (6x10)',
             'status' =>'1',
         ]);
 
         $ticket= Ticket::create([
-            'use_id' =>'2',
+            'user_id' =>'2',
             'issue' =>'Las lluvias de Castamere (3x09)',
             'status' =>'1',
         ]);
 
         $ticket= Ticket::create([
-            'use_id' =>'2',
+            'user_id' =>'2',
             'issue' =>'La batalla de los bastardos (6x09)',
             'status' =>'1',
         ]);
 
         $ticket= Ticket::create([
-            'use_id' =>'2',
+            'user_id' =>'2',
             'issue' =>'El ascenso (3x06)',
             'status' =>'1',
         ]);
