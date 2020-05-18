@@ -50,6 +50,14 @@ class TicketController extends Controller
         
     }
 
+    public function list_users(){
+
+        $query = User::all();
+        return $query;
+  
+    }
+
+
     public function user_tickets($id){
 
         $query = Ticket::where('user_id','=',$id)->get();
@@ -59,7 +67,7 @@ class TicketController extends Controller
 
     public function all_user_tickets(){
 
-        $query = Ticket::join('users', 'user_id', '=', 'users.id')->get();
+        $query = User::join('tickets', 'users.id', '=', 'tickets.user_id')->get();
         return $query;
   
     }
@@ -69,13 +77,12 @@ class TicketController extends Controller
         $request->validate([
             'user_id'     => ['required'],
             'issue'       => ['required'],
-            'status'      => ['required']           
+                  
         ]);
 
         $ticket = Ticket::find($request->id);
         $ticket->user_id= $request->user_id;
         $ticket->issue= $request->issue;
-        $ticket->status= $request->status;
 
         $ticket->save();
 

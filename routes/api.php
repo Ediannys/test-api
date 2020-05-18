@@ -35,9 +35,13 @@ Route::group([
 
     Route::get('find/{id}', 'TicketController@find_ticket');
 
+    Route::get('list_users', 'TicketController@list_users');
+
+    Route::get('all_user_tickets', 'TicketController@all_user_tickets');
+
     Route::get('user_tickets/{id}', 'TicketController@user_tickets');
 
-    Route::put('update', 'TicketController@update_ticket');
+    Route::put('update/{id}', 'TicketController@update_ticket');
 
     Route::put('update_status/{id}', 'TicketController@update_status');
 

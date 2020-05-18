@@ -28,3 +28,7 @@ Route::get('/login', function () {
 Route::get('/user_profile', function () {
     return view('user');
 });
+
+Route::get('/admin_profile', function () {
+    return view('admin');
+});

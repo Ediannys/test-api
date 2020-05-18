@@ -57,13 +57,25 @@ export const getTicket = id => {
       })
   }
 
+  
+export const getUsers = () => {
+  return axios
+    .get('api/ticket/list_users')
+    .then(response => {
+      return response.data
+    }).catch(err => {
+      console.log(err)
+    })
+}
+
   export const updateStatusTicket = ticket => {
     return axios
       .put('api/ticket/update_status/'+ ticket.id, {
         status:  ticket.status
       })
       .then(response => {
-        console.log('Ticket actualizado')
+        console.log('Estado de ticket actualizado')
+        return response.data
       }).catch(err => {
         console.log(err)
       })
@@ -72,12 +84,13 @@ export const getTicket = id => {
 
   export const updateTicket = ticket => {
     return axios
-      .put('http://test-api/api/ticket/update/'+ ticket.id, {
+      .put('api/ticket/update/'+ ticket.id, {
         user_id: ticket.user_id,
         issue: ticket.issue, 
       })
       .then(response => {
-        console.log(response)
+        console.log('Ticket actualizado')
+        return response.data
       }).catch(err => {
         console.log(err)
       })
@@ -87,9 +100,10 @@ export const getTicket = id => {
 
   export const removeTicket = id => {
     return axios
-      .delete('http://test-api/api/ticket/delete/'+id)
+      .delete('api/ticket/delete/'+id)
       .then(response => {
         console.log('Ticket Eliminado')
+        return response.data
       }).catch(err => {
         console.log(err)
       })
