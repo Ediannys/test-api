@@ -30,6 +30,6 @@
         "final-form": "^4.19.1",
         "react-final-form": "^6.4.0",
         "react-router-dom": "^5.2.0",
-        "validator": "^13.0.0"
+        "validator": "^13.7.0"
     }
 }
